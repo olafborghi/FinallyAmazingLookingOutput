@@ -1,8 +1,8 @@
 # FinallyAmazingLookingOutput
 
-**FALO**: custom themes for ggplot2 and more functions to create figures and tables.
+**falo**: custom themes for ggplot2 and more functions to create figures and tables.
 
-FALO sets plots in [Public Sans](https://fonts.google.com/specimen/Public+Sans). The font is downloaded once from Google Fonts and registered through systemfonts, so plots look the same on macOS, Windows and Linux, with or without Public Sans installed.
+falo sets plots in [Public Sans](https://fonts.google.com/specimen/Public+Sans). The font is downloaded once from Google Fonts and registered through systemfonts, so plots look the same on macOS, Windows and Linux, with or without Public Sans installed.
 
 ## Installation
 
