@@ -8,7 +8,7 @@ falo sets plots in [Public Sans](https://fonts.google.com/specimen/Public+Sans).
 
 ```r
 # install.packages("pak")
-pak::pak("yourname/falo")
+pak::pak("olafborghi/falo")
 ```
 
 The first time FALO is loaded it downloads Public Sans. If that fails, run `falo_install_fonts()` later.
