@@ -6,18 +6,18 @@
 \alias{falo-package}
 \title{falo: Finally Amazing Looking Output}
 \description{
-Custom themes for 'ggplot2' graphics set in the 'Public Sans' typeface. The font is downloaded once from Google Fonts and registered with 'systemfonts', one family per weight, so it renders identically on macOS, Windows and Linux. Helpers embed the same font files in SVG files saved with 'svglite'.
+Custom themes for 'ggplot2' graphics set in the 'Public Sans' typeface. The font is downloaded once from Google Fonts and registered with 'systemfonts', one family per weight, so it renders identically on macOS, Windows and Linux. Helpers embed the same font files in SVG files saved with 'svglite'. It also builds descriptive sample tables with 'tinytable'.
 }
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/yourname/falo}
-  \item Report bugs at \url{https://github.com/yourname/falo/issues}
+  \item \url{https://github.com/olafborghi/FinallyAmazingLookingOutput}
+  \item Report bugs at \url{https://github.com/olafborghi/FinallyAmazingLookingOutput/issues}
 }
 
 }
 \author{
-\strong{Maintainer}: Your Name \email{you@example.com} [copyright holder]
+\strong{Maintainer}: Olaf Borghi \email{olafborghi@gmail.com} [copyright holder]
 
 }
 \keyword{internal}

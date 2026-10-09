@@ -8,7 +8,7 @@ falo sets plots in [Public Sans](https://fonts.google.com/specimen/Public+Sans).
 
 ```r
 # install.packages("pak")
-pak::pak("olafborghi/falo")
+pak::pak("olafborghi/FinallyAmazingLookingOutput")
 ```
 
 The first time FALO is loaded it downloads Public Sans. If that fails, run `falo_install_fonts()` later.
@@ -33,6 +33,29 @@ ggsave("figure.svg", width = 6, height = 5, web_fonts = falo_svg_fonts())
 ```
 
 PNG files saved with `ggsave()` use ragg automatically and need nothing extra.
+
+## Descriptive tables
+
+`descriptive_table()` turns a data frame with metric and categorical variables into a descriptive sample overview: mean, SD, min and max for numeric columns, and the percentage of each category for factor, character and logical columns. Survey weights are optional.
+
+```r
+library(falo)
+
+tab <- descriptive_table(
+  survey,                       # your data frame
+  vars    = c("age", "attitude", "gender", "education"),
+  weights = "w",                # optional weight column
+  labels  = c(age = "Age", attitude = "Attitude index",
+              gender = "Gender", education = "Education"),
+  keep    = list(gender = "Female"),   # show one row for binary variables
+  caption = "Descriptive sample overview"
+)
+
+tab                                    # prints in the Viewer / Quarto
+tinytable::save_tt(tab, "table1.html") # or .tex, .pdf, .docx, .typ
+```
+
+The result is a normal tinytable, so you can keep styling it with `tinytable::style_tt()` and export it with `tinytable::save_tt()`.
 
 ## Font names
 
