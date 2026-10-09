@@ -4,6 +4,8 @@
 
 falo sets plots in [Public Sans](https://fonts.google.com/specimen/Public+Sans). The font is downloaded once from Google Fonts and registered through systemfonts, so plots look the same on macOS, Windows and Linux, with or without Public Sans installed.
 
+![A scatter plot with GAM smooths styled with theme_allround()](man/figures/README-theme_allround.png)
+
 ## Installation
 
 ```r
@@ -15,15 +17,29 @@ The first time FALO is loaded it downloads Public Sans. If that fails, run `falo
 
 ## Usage
 
+This draws the figure at the top of the page:
+
 ```r
 library(ggplot2)
 library(falo)
 
 theme_set(theme_allround())
 
-ggplot(mpg, aes(displ, hwy, colour = drv)) +
-  geom_point() +
-  labs(title = "Bigger engines, fewer miles", x = "Displacement (l)", y = "Highway mpg")
+cars <- transform(mpg, drive = factor(drv, levels = c("f", "r", "4"),
+                                      labels = c("Front", "Rear", "4WD")))
+
+ggplot(cars, aes(displ, hwy, colour = drive, fill = drive)) +
+  geom_point(alpha = 0.5, size = 2, position = position_jitter(0.05, 0.3, seed = 1)) +
+  geom_smooth(method = "gam", formula = y ~ s(x, k = 5), alpha = 0.2) +
+  scale_colour_brewer(palette = "Dark2", aesthetics = c("colour", "fill")) +
+  labs(
+    title    = "Bigger engines, fewer miles",
+    subtitle = "Highway fuel economy by engine size, with GAM smooths",
+    x        = "Displacement (litres)",
+    y        = "Highway miles per gallon",
+    colour   = "Drive", fill = "Drive",
+    caption  = "Data: ggplot2::mpg"
+  )
 ```
 
 Save an SVG with the fonts embedded, so it displays correctly on any computer:
