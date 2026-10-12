@@ -1,4 +1,6 @@
-# falo (development version)
+# falo 0.3.0
+
+# falo 0.2.0
 
 * New `descriptive_table()` builds a descriptive sample overview table (metric
   and categorical variables, optional survey weights) as a tinytable object.
