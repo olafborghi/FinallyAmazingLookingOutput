@@ -1,6 +1,6 @@
 Package: falo
 Title: Finally Amazing Looking Output
-Version: 0.3.0.9000
+Version: 0.2.0.9000
 Authors@R: 
     person("Olaf", "Borghi", , "olafborghi@gmail.com", role = c("aut", "cre", "cph"))
 Description: Custom themes for 'ggplot2' graphics set in the 'Public Sans'

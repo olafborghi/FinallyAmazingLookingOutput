@@ -1,7 +1,5 @@
 # falo (development version)
 
-# falo 0.3.0
-
 # falo 0.2.0
 
 * New `descriptive_table()` builds a descriptive sample overview table (metric
